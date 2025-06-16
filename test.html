@@ -1,51 +1,69 @@
-<section class="test">
-  <h2>Test de Socioemociones</h2>
-  <form id="testForm">
-    
-    <!-- Pregunta 1 -->
-    <div class="pregunta">
-      <p>1. Cuando un amigo está triste, ¿qué haces?</p>
-      <label>
-        <input type="radio" name="p1" value="a"> Le pregunto qué le pasa y lo escucho.
-      </label>
-      <label>
-        <input type="radio" name="p1" value="b"> Lo noto, pero no sé cómo ayudarlo.
-      </label>
-      <label>
-        <input type="radio" name="p1" value="c"> No me doy cuenta.
-      </label>
-    </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Socioemociones</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <header class="test-header">
+        <h1>Test de Socioemociones</h1>
+        <a href="index.html" class="btn-back">← Volver al inicio</a>
+    </header>
 
-    <!-- Pregunta 2 -->
-    <div class="pregunta">
-      <p>2. ¿Con qué frecuencia das las gracias?</p>
-      <label>
-        <input type="radio" name="p2" value="a"> Siempre, incluso por pequeños gestos.
-      </label>
-      <label>
-        <input type="radio" name="p2" value="b"> Solo cuando alguien hace algo importante por mí.
-      </label>
-      <label>
-        <input type="radio" name="p2" value="c"> Casi nunca.
-      </label>
-    </div>
+    <main class="test-main">
+        <section class="test">
+            <form id="testForm">
+                <!-- Pregunta 1 -->
+                <div class="pregunta">
+                    <p>1. Cuando un amigo está triste, ¿qué haces?</p>
+                    <label>
+                        <input type="radio" name="p1" value="a" required> Le pregunto qué le pasa y lo escucho.
+                    </label>
+                    <label>
+                        <input type="radio" name="p1" value="b"> Lo noto, pero no sé cómo ayudarlo.
+                    </label>
+                    <label>
+                        <input type="radio" name="p1" value="c"> No me doy cuenta.
+                    </label>
+                </div>
 
-    <!-- Pregunta 3 -->
-    <div class="pregunta">
-      <p>3. Si alguien tiene una opinión diferente a la tuya, ¿cómo reaccionas?</p>
-      <label>
-        <input type="radio" name="p3" value="a"> La escucho y respeto, aunque no esté de acuerdo.
-      </label>
-      <label>
-        <input type="radio" name="p3" value="b"> Discuto para demostrar que tengo razón.
-      </label>
-      <label>
-        <input type="radio" name="p3" value="c"> Ignoro a la persona.
-      </label>
-    </div>
+                <!-- Pregunta 2 -->
+                <div class="pregunta">
+                    <p>2. ¿Con qué frecuencia das las gracias?</p>
+                    <label>
+                        <input type="radio" name="p2" value="a" required> Siempre, incluso por pequeños gestos.
+                    </label>
+                    <label>
+                        <input type="radio" name="p2" value="b"> Solo cuando alguien hace algo importante por mí.
+                    </label>
+                    <label>
+                        <input type="radio" name="p2" value="c"> Casi nunca.
+                    </label>
+                </div>
 
-    <button type="button" onclick="calcularResultado()">Ver resultado</button>
-  </form>
+                <!-- Pregunta 3 -->
+                <div class="pregunta">
+                    <p>3. Si alguien tiene una opinión diferente a la tuya, ¿cómo reaccionas?</p>
+                    <label>
+                        <input type="radio" name="p3" value="a" required> La escucho y respeto, aunque no esté de acuerdo.
+                    </label>
+                    <label>
+                        <input type="radio" name="p3" value="b"> Discuto para demostrar que tengo razón.
+                    </label>
+                    <label>
+                        <input type="radio" name="p3" value="c"> Ignoro a la persona.
+                    </label>
+                </div>
 
-  <div id="resultado" class="resultado"></div>
-</section>
+                <button type="button" class="btn-test" onclick="calcularResultado()">Ver resultado</button>
+            </form>
+
+            <div id="resultado" class="resultado"></div>
+        </section>
+    </main>
+
+    <script src="test.js"></script>
+</body>
+</html>
