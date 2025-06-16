@@ -32,7 +32,7 @@ function calcularResultado() {
         `;
     } else {
         resultado.innerHTML = `
-            <h3>¡Opportunidad para crecer! 🌱</h3>
+            <h3>¡Oportunidad para crecer! 🌱</h3>
             <p>Revisa los recursos de esta página para mejorar.</p>
         `;
     }
