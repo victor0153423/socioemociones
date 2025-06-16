@@ -126,52 +126,83 @@ footer p {
   height: 100%;
   border: none;
 }
-/* Estilos para el test */
+
+/* ===== ESTILOS DEL TEST ===== */
+.test-header {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.test-main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .test {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 600px;
-  margin: 30px auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pregunta {
-  margin-bottom: 20px;
-  text-align: left;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
 }
 
 .pregunta p {
-  font-weight: bold;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .pregunta label {
-  display: block;
-  margin: 10px 0;
-  cursor: pointer;
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background 0.3s;
+    cursor: pointer;
 }
 
-button {
-  background: #4facfe;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
+.pregunta label:hover {
+    background: #e6f2ff;
 }
 
-button:hover {
-  background: #00f2fe;
+.btn-test {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.3s;
+}
+
+.btn-test:hover {
+    transform: translateY(-3px);
 }
 
 .resultado {
-  margin-top: 20px;
-  padding: 15px;
-  background: #f8f8f8;
-  border-radius: 8px;
-  display: none;
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border-left: 5px solid #4facfe;
+    display: none;
+}
+
+.resultado h3 {
+    color: #4facfe;
+    margin-top: 0;
 }
 
 
