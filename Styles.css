@@ -1,0 +1,109 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+  color: #333;
+}
+
+main {
+  padding: 40px;
+}
+
+header {
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.emocion {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.emocion img {
+  width: 250px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.carta {
+  flex: 1 1 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carta img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #6b6b6b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.carta {
+  flex: 1 1 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-back {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 18px;
+  font-size: 18px;
+  color: #333;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  user-select: none;
+}
+
+.btn-back:hover {
+  transform: scale(1.15) translateX(-5px);
+  background-color: #ddd;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  font-size: 15px;
+}
