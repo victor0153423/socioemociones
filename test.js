@@ -1,39 +1,41 @@
 function calcularResultado() {
-    // Obtener respuestas
-    const p1 = document.querySelector('input[name="p1"]:checked')?.value;
-    const p2 = document.querySelector('input[name="p2"]:checked')?.value;
-    const p3 = document.querySelector('input[name="p3"]:checked')?.value;
-
-    // Validar respuestas
-    if (!p1 || !p2 || !p3) {
-        alert("¡Por favor responde todas las preguntas!");
-        return;
+    // Calcular puntaje
+    let puntaje = 0;
+    
+    // Preguntas 1-10
+    for (let i = 1; i <= 10; i++) {
+        const respuesta = document.querySelector(`input[name="p${i}"]:checked`);
+        
+        if (!respuesta) {
+            alert("¡Por favor responde todas las preguntas!");
+            return;
+        }
+        
+        if (respuesta.value === "a") puntaje += 3;
+        else if (respuesta.value === "b") puntaje += 1;
     }
-
-    // Calcular puntuación
-    let puntuacion = 0;
-    if (p1 === "a") puntuacion += 3;
-    if (p2 === "a") puntuacion += 3;
-    if (p3 === "a") puntuacion += 3;
 
     // Mostrar resultado
     const resultado = document.getElementById("resultado");
     resultado.style.display = "block";
 
-    if (puntuacion >= 7) {
+    if (puntaje >= 25) {
         resultado.innerHTML = `
-            <h3>¡Excelente! 🌟</h3>
-            <p>Tienes habilidades socioemocionales muy desarrolladas.</p>
+            <h3>¡Excelente desarrollo socioemocional! 🌟</h3>
+            <p>Tu puntuación: ${puntaje}/30</p>
+            <p>Demuestras alta empatía, gratitud y respeto. Sigue siendo un ejemplo para los demás.</p>
         `;
-    } else if (puntuacion >= 4) {
+    } else if (puntaje >= 15) {
         resultado.innerHTML = `
-            <h3>Vas por buen camino 😊</h3>
-            <p>Reconoces las emociones, pero puedes mejorar.</p>
+            <h3>Buenas habilidades 😊</h3>
+            <p>Tu puntuación: ${puntaje}/30</p>
+            <p>Tienes bases sólidas pero puedes profundizar en la conciencia emocional.</p>
         `;
     } else {
         resultado.innerHTML = `
-            <h3>¡Oportunidad para crecer! 🌱</h3>
-            <p>Revisa los recursos de esta página para mejorar.</p>
+            <h3>Área de oportunidad 🌱</h3>
+            <p>Tu puntuación: ${puntaje}/30</p>
+            <p>Revisa los recursos sobre empatía, gratitud y respeto para mejorar tus relaciones.</p>
         `;
     }
 }
